@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Bhaichara-v1/static/css/main.557ed957.chunk.css",
-    "main.js": "/Bhaichara-v1/static/js/main.b802e740.chunk.js",
-    "main.js.map": "/Bhaichara-v1/static/js/main.b802e740.chunk.js.map",
+    "main.js": "/Bhaichara-v1/static/js/main.61c97a92.chunk.js",
+    "main.js.map": "/Bhaichara-v1/static/js/main.61c97a92.chunk.js.map",
     "runtime-main.js": "/Bhaichara-v1/static/js/runtime-main.7222d216.js",
     "runtime-main.js.map": "/Bhaichara-v1/static/js/runtime-main.7222d216.js.map",
     "static/js/2.602c5428.chunk.js": "/Bhaichara-v1/static/js/2.602c5428.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.7222d216.js",
     "static/js/2.602c5428.chunk.js",
     "static/css/main.557ed957.chunk.css",
-    "static/js/main.b802e740.chunk.js"
+    "static/js/main.61c97a92.chunk.js"
   ]
 }
