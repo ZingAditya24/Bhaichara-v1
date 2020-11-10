@@ -28,6 +28,8 @@ function App() {
 
   const [user] = useAuthState(auth);
 
+  const [createdDate, setCreatedDate] = useState(1);
+
   return (
     <div className="App">
       <header>
@@ -112,7 +114,7 @@ function ChatRoom() {
 
 }
 
-function dateConvert(creadtedAt=1){
+function dateConvert(creadtedAt){
   var d = new Date(creadtedAt * 1000);
   return (d.toDateString("in").slice(4) + " @ "+ d.toLocaleTimeString().slice(0,4) + d.toLocaleTimeString().slice(7));
 }
@@ -123,13 +125,14 @@ function ChatMessage(props) {
 
   const messageside = messageClass === "sent" ? "right" : "left";
 
+  
   return (<>
 
     <div className="ui container comments">
             <div className={`message ${messageClass}`}>
-                <div className="avatar">
+                <a href="/" className="avatar">
                     <img alt="avatar" src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'}/>
-                </div>
+                </a>
                 <div className="content">
                     <p>
                       <div className="text">{text}</div>
@@ -137,7 +140,9 @@ function ChatMessage(props) {
                     
                 </div>
             </div>
-            
+            <div className="metadata">
+                <span style={{float:messageside}}>{dateConvert(createdAt === null ? 1 : createdAt.seconds)}</span>
+            </div>
     </div>
 
 
