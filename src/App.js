@@ -70,7 +70,7 @@ function ChatRoom() {
 
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
+  const query = messagesRef.orderBy('createdAt');
 
   
   const [messages] = useCollectionData(query, { idField: 'id' , createdAt : 'createdAt'});
@@ -141,7 +141,7 @@ function ChatMessage(props) {
                 </div>
             </div>
             <div className="metadata">
-                <span style={{float:messageside}}>{dateConvert(createdAt === null ? 1 : createdAt.seconds)}</span>
+                <span style={{float:messageside, color: "darkgray"}}>{dateConvert(createdAt === null ? 1 : createdAt.seconds)}</span>
             </div>
     </div>
 
